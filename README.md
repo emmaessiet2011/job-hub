@@ -1,7 +1,3 @@
-# Nigeria Hub - Job Openings Mockup
-
-This project is a visually appealing, responsive mockup webpage for a fictional company, "Nigeria Hub," designed to showcase open job positions. It serves as a modern and engaging careers page, built with a focus on clean UI/UX design and smooth animations.
-
 ## About The App
 
 The Nigeria Hub Job Openings page is a demonstration of a modern career portal. It features a striking hero section with the company's mission, followed by a clean, card-based layout for individual job roles. Each job card provides essential details like title, location, and job type, along with a brief description and relevant skill tags.
@@ -45,4 +41,4 @@ The codebase is organized into logical components and files for clarity:
     └── icons/            # SVG icon components
 ```
 
-This project demonstrates best practices in frontend development, creating a beautiful and functional user interface for a company's career page.
+
