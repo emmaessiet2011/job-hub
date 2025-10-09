@@ -1,34 +1,39 @@
 import React from 'react';
+import Navigation from './components/Navigation';
 import Header from './components/Header';
 import JobListing from './components/JobListing';
+import CommunityStats from './components/CommunityStats';
+import WhatWeDo from './components/WhatWeDo';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
     return (
-        <div className="relative isolate min-h-screen overflow-x-hidden bg-brand-green-darker font-sans">
-            {/* Background decorative elements for Header */}
-            <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-                <div
-                    className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-brand-green-dark to-brand-green opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                    style={{
-                        clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                    }}
-                />
+        <div className="min-h-screen font-sans bg-brand-background">
+            <Navigation />
+            <div className="relative overflow-hidden">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <Header />
+                </div>
             </div>
 
-            {/* Green Header Section */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-                <Header />
+            <div className="py-16 sm:py-24">
+                <CommunityStats />
             </div>
 
-            {/* White Main Content Section */}
-            <main className="bg-brand-white">
+            <div className="bg-white">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+                    <WhatWeDo />
+                </div>
+            </div>
+
+            <main id="job-listings" className="bg-brand-background">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
                     <JobListing />
-                    <CTA />
                 </div>
             </main>
+
+            <CTA />
             
             <Footer />
         </div>

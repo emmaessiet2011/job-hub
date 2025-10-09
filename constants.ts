@@ -1,65 +1,66 @@
 import { Job, FilterType } from './types';
 
-export const TRELLO_LINK = 'https://trello.com/c/K7XpnGsO/2-developer-frontend-backend';
+export const TRELLO_LINK = 'https://trello.com/b/f8i39h6l/radassist-ai-nigeria-hub';
 export const APPLY_LINK = 'https://docs.google.com/forms/d/1vVMFrzbw_j1cfWsoRAGu09yT6qheJ2zVStiHhnRk8Pk/viewform?edit_requested=true';
+export const SUBMIT_CV_LINK = 'https://docs.google.com/forms/d/1vVMFrzbw_j1cfWsoRAGu09yT6qheJ2zVStiHhnRk8Pk/viewform?edit_requested=true';
 
 export const FILTER_OPTIONS: FilterType[] = ['All', 'Full-time', 'Contract', 'Internship'];
 
 export const JOB_ROLES: Job[] = [
   {
     id: 1,
-    title: 'Senior Frontend Engineer',
+    title: 'AI/ML Engineer',
     location: 'Lagos, Nigeria (Remote)',
     type: 'Full-time',
-    description: 'Lead the development of our next-gen user interfaces with React and TypeScript, focusing on performance and user experience.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Web Vitals'],
+    description: 'Design and implement machine learning models for healthcare applications, focusing on predictive analytics and medical imaging.',
+    tags: ['Python', 'TensorFlow', 'PyTorch', 'Medical Imaging'],
   },
   {
     id: 2,
-    title: 'Lead Backend Engineer',
+    title: 'Data Scientist (Healthcare)',
     location: 'Abuja, Nigeria (Hybrid)',
     type: 'Full-time',
-    description: 'Architect and maintain scalable backend services. Expertise in Node.js, PostgreSQL, and cloud infrastructure is required.',
-    tags: ['Node.js', 'PostgreSQL', 'AWS', 'Microservices'],
+    description: 'Analyze complex medical datasets to extract actionable insights and improve patient outcomes. Strong experience with clinical data.',
+    tags: ['R', 'SQL', 'HL7/FHIR', 'Statistics'],
   },
    {
     id: 3,
-    title: 'Full-Stack Engineer',
+    title: 'Clinical Informatics Specialist',
     location: 'Remote',
-    type: 'Full-time',
-    description: 'Work across the entire stack to build and ship new features. Proficient in both frontend and backend technologies.',
-    tags: ['React', 'Node.js', 'GraphQL', 'Docker'],
+    type: 'Contract',
+    description: 'Bridge the gap between clinical practice and information technology. Work on EHR integration and data standardization.',
+    tags: ['EHR', 'Informatics', 'Healthcare IT', 'Interoperability'],
   },
   {
     id: 4,
-    title: 'UX/UI Designer',
-    location: 'Lagos, Nigeria (Contract)',
-    type: 'Contract',
-    description: 'Craft intuitive and beautiful user experiences. Create wireframes, prototypes, and high-fidelity designs for web and mobile.',
-    tags: ['Figma', 'User Research', 'Prototyping', 'Design Systems'],
+    title: 'Senior Backend Engineer (HealthTech)',
+    location: 'Lagos, Nigeria',
+    type: 'Full-time',
+    description: 'Build secure and scalable backend systems compliant with healthcare regulations like HIPAA. Expertise in Node.js and cloud services.',
+    tags: ['Node.js', 'PostgreSQL', 'HIPAA', 'GCP/AWS'],
   },
   {
     id: 5,
-    title: 'Product Manager',
-    location: 'Lagos, Nigeria',
+    title: 'Frontend Engineer (HealthTech)',
+    location: 'Remote',
     type: 'Full-time',
-    description: 'Define product vision, strategy, and roadmap. Work closely with engineering and design to deliver impactful products.',
-    tags: ['Agile', 'Roadmapping', 'Product Strategy', 'Jira'],
+    description: 'Develop accessible and intuitive user interfaces for clinicians and patients. Experience with React and data visualization.',
+    tags: ['React', 'TypeScript', 'D3.js', 'Accessibility'],
   },
   {
     id: 6,
-    title: 'DevOps Engineer',
-    location: 'Remote',
+    title: 'Product Manager (AI Health)',
+    location: 'Lagos, Nigeria',
     type: 'Full-time',
-    description: 'Automate and streamline our operations and processes. Build and maintain tools for CI/CD, deployment, and monitoring.',
-    tags: ['Kubernetes', 'Docker', 'Terraform', 'CI/CD'],
+    description: 'Drive the product strategy for our AI-powered healthcare solutions. Collaborate with stakeholders to define and deliver features.',
+    tags: ['Agile', 'Roadmapping', 'Healthcare', 'AI Products'],
   },
   {
     id: 7,
-    title: 'Software Engineering Intern',
+    title: 'Healthcare Data Analyst Intern',
     location: 'Remote',
     type: 'Internship',
-    description: 'Join our team as an intern and gain hands-on experience in software development. Work on real projects and learn from experienced mentors.',
-    tags: ['Learning', 'Mentorship', 'Web Dev'],
+    description: 'Support our data science team with data cleaning, analysis, and visualization tasks. A great opportunity to learn about HealthTech.',
+    tags: ['SQL', 'Excel', 'Tableau', 'Learning'],
   },
 ];

@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Explore exciting career opportunities at Nigeria Hub. We are hiring for various roles in engineering, design, and product management." />
-    <meta name="keywords" content="Nigeria jobs, tech careers, frontend developer, backend developer, UI/UX designer, product manager" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇳🇬</text></svg>">
-    <title>Nigeria Hub - Job Openings</title>
+    <meta name="description" content="Join Nigeria's brightest minds in building cutting-edge AI solutions for the NHS. Gain real-world experience while contributing to global healthcare innovation." />
+    <meta name="keywords" content="Nigeria jobs, healthcare AI, AI careers, data science, machine learning, clinical informatics" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <title>Nigeria Hub - Healthcare AI Innovation</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://rsms.me/inter/inter.css');
-        html { font-family: 'Inter', sans-serif; }
-    </style>
     <script type="importmap">
     {
         "imports": {
@@ -25,25 +26,46 @@
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: {
+                        'sans': ['Manrope', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
                     colors: {
-                        'brand-green': {
-                            light: '#A7F3D0',
-                            DEFAULT: '#34D399',
-                            dark: '#059669',
-                            darker: '#064E3B',
+                        'brand-background': '#F8F7F4',
+                        'brand-charcoal': '#212121',
+                        'brand-teal': {
+                            DEFAULT: '#004D40',
+                            light: '#E0F2F1',
+                            dark: '#00382E',
                         },
-                        'brand-white': {
-                            DEFAULT: '#F9FAFB',
-                            dark: '#F3F4F6',
-                        }
+                        'brand-gold': {
+                            DEFAULT: '#FFC107',
+                            dark: '#FFA000',
+                        },
+                        'brand-gray': '#5F6368',
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'stagger-in': 'staggerIn 0.5s ease-out forwards',
+                        'hero-graphic-in': 'heroGraphicIn 1s cubic-bezier(0.25, 1, 0.5, 1) forwards',
+                        'character-in': 'characterIn 0.75s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
                     },
                     keyframes: {
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '0%': { opacity: '0', transform: 'translateY(24px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        staggerIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px) scale(0.98)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+                        },
+                        heroGraphicIn: {
+                            '0%': { opacity: '0', transform: 'scale(0.9) rotate(-5deg)' },
+                            '100%': { opacity: '1', transform: 'scale(1) rotate(0deg)' },
+                        },
+                        characterIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px) scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
                         },
                     },
                 },
@@ -52,7 +74,7 @@
     </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-<body class="bg-brand-green-darker text-brand-white antialiased">
+<body class="bg-brand-background text-brand-gray antialiased">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>

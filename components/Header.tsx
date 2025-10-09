@@ -1,50 +1,78 @@
-import React from 'react';
-import { APPLY_LINK } from '../constants';
-import ArrowRightIcon from './icons/ArrowRightIcon';
+import React, { useState, useEffect } from 'react';
+import BriefcaseIcon from './icons/BriefcaseIcon';
+import HeroGraphic from './HeroGraphic';
+
+const slidingWords = [
+  'Heart of Healthcare',
+  'Future of Medicine',
+  'Nexus of AI',
+  'Service of Patients',
+];
 
 const Header: React.FC = () => {
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % slidingWords.length);
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const handleScrollToJobs = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     event.preventDefault();
-    const targetId = event.currentTarget.getAttribute('href')?.substring(1);
-    if (targetId) {
-      const element = document.getElementById(targetId);
-      if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+    const element = document.getElementById('job-listings');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
   };
 
   return (
-    <header className="text-center animate-fade-in-up" style={{ animationDelay: '0.2s', opacity: 0 }}>
-      <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-        Build the Future of Tech in
-        <span className="block bg-clip-text text-transparent bg-gradient-to-r from-brand-green-light to-brand-green">
-          Nigeria
-        </span>
-      </h1>
-      <p className="mt-6 max-w-3xl mx-auto text-lg text-brand-green-light/80 sm:text-xl md:text-2xl">
-        Join our innovative team and shape the next generation of digital experiences. We're looking for passionate individuals to grow with us.
-      </p>
-      <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a
-          href="#job-listings"
-          onClick={handleScrollToJobs}
-          className="inline-flex items-center justify-center px-8 py-3 w-full sm:w-auto text-base font-bold text-brand-green-darker bg-brand-white rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-brand-white/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-white"
-        >
-          View Open Roles
-        </a>
-        <a
-          href={APPLY_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group/button inline-flex items-center justify-center px-8 py-3 w-full sm:w-auto text-base font-semibold text-brand-white bg-transparent border border-brand-green rounded-lg shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-brand-green/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-green"
-        >
-          <span>Apply Generally</span>
-          <ArrowRightIcon className="ml-2 transition-transform duration-300 group-hover/button:translate-x-1" />
-        </a>
+    <header className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-16 sm:py-24 lg:py-28">
+      <div className="text-center lg:text-left animate-fade-in-up" style={{ opacity: 0 }}>
+        <span className="text-brand-teal font-semibold">NIGERIA HUB</span>
+        <h1 className="mt-4 text-4xl font-serif font-bold tracking-tight text-brand-charcoal sm:text-5xl md:text-6xl lg:text-7xl">
+          Innovating at the
+          <span className="block text-brand-teal h-[1.2em] overflow-hidden">
+            <span
+              key={currentWordIndex}
+              className="flex justify-center lg:justify-start"
+            >
+              {slidingWords[currentWordIndex].split('').map((char, index) => (
+                <span
+                  key={`${char}-${index}`}
+                  className="animate-character-in inline-block"
+                  style={{
+                    opacity: 0,
+                    animationDelay: `${50 * index}ms`,
+                  }}
+                >
+                  {char === ' ' ? '\u00A0' : char}
+                </span>
+              ))}
+            </span>
+          </span>
+        </h1>
+        <p className="mt-6 text-lg text-brand-gray max-w-xl mx-auto lg:mx-0">
+          Join Nigeria's brightest minds in building cutting-edge AI solutions for the NHS. Gain real-world experience while contributing to global healthcare innovation.
+        </p>
+        <div className="mt-10 flex justify-center lg:justify-start">
+          <a
+            href="#job-listings"
+            onClick={handleScrollToJobs}
+            className="group inline-flex items-center justify-center gap-x-2.5 px-8 py-4 text-base font-bold text-brand-charcoal bg-brand-gold rounded-full shadow-lg transition-all duration-300 hover:bg-brand-gold-dark hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-gold"
+          >
+            <span>View Open Roles</span>
+            <BriefcaseIcon className="transition-transform duration-300 group-hover:rotate-12" />
+          </a>
+        </div>
+      </div>
+      <div className="hidden lg:block animate-hero-graphic-in" style={{ opacity: 0 }}>
+        <HeroGraphic />
       </div>
     </header>
   );
