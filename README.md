@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # Nigeria Hub 
 
 
+=======
+>>>>>>> 6c8490ce30b9bcee501bb8449ef8bf9cfe74c3b2
 ## About The App
 
 The Nigeria Hub careers page is a demonstration of a modern portal for attracting talent in the HealthTech space. It features a striking hero section that clearly communicates the organization's mission, followed by a clean, card-based layout for individual job roles. Each job card provides essential details like title, location, and job type, along with a brief description and relevant skill tags.
@@ -42,4 +45,8 @@ The codebase is organized into logical components and files for clarity:
     └── icons/            # SVG icon components
 ```
 
+<<<<<<< HEAD
 This project demonstrates best practices in frontend development, creating a beautiful and functional user interface for a company's career page.
+=======
+
+>>>>>>> 6c8490ce30b9bcee501bb8449ef8bf9cfe74c3b2
