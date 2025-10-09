@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import BriefcaseIcon from './icons/BriefcaseIcon';
-import HeroGraphic from './HeroGraphic';
+import HeroImage from './HeroImage';
 
 const slidingWords = [
-  'Heart of Healthcare',
-  'Future of Medicine',
+  'Heart of Care',
+  'Health\'s Future',
   'Nexus of AI',
-  'Service of Patients',
+  'Patient Service',
 ];
 
 const Header: React.FC = () => {
@@ -72,7 +72,7 @@ const Header: React.FC = () => {
         </div>
       </div>
       <div className="hidden lg:block animate-hero-graphic-in" style={{ opacity: 0 }}>
-        <HeroGraphic />
+        <HeroImage />
       </div>
     </header>
   );

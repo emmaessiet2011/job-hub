@@ -1,10 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "Nigeria Hub",
   "description": "A mockup page for Nigeria Hub, showcasing roles in Healthcare AI innovation. Includes job cards with links to Trello and Microsoft Forms.",
-=======
-  "name": "Nigeria Job hub",
-  "description": "A visually stunning mockup page for Nigeria Hub, showcasing open job roles with links to Trello for details and a form for applications. Designed with modern UI/UX principles.",
->>>>>>> 6c8490ce30b9bcee501bb8449ef8bf9cfe74c3b2
   "requestFramePermissions": []
 }

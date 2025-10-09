@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "nigeria-hub",
-=======
-  "name": "nigeria job hub",
->>>>>>> 6c8490ce30b9bcee501bb8449ef8bf9cfe74c3b2
   "private": true,
   "version": "0.0.0",
   "type": "module",
