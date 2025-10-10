@@ -111,15 +111,15 @@ const FocusAreas: React.FC = () => {
                                 className="group/trello flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 font-semibold text-nhs-blue border-2 border-nhs-blue rounded-full shadow-sm transition-all duration-200 hover:bg-nhs-blue hover:text-white"
                             >
                                 <TrelloIcon className="transition-transform duration-200 group-hover/trello:scale-110" />
-                                <span>View on Trello</span>
+                                <span>View Tasks</span>
                             </a>
                             <a
                                 href={APPLY_LINK}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group/button flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 font-bold text-white bg-nhs-blue rounded-full shadow-sm transition-colors duration-200 hover:bg-nhs-blue-dark"
+                                className="group/button flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 font-bold text-white bg-nhs-blue rounded-full shadow-sm transition-colors duration-200 hover:bg-nhs-blue-dark text-center"
                             >
-                                <span>Submit Your Task</span>
+                                <span>Submit Task</span>
                                 <ArrowRightIcon className="transition-transform duration-200 group-hover/button:translate-x-1" />
                             </a>
                         </div>

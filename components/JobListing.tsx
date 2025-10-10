@@ -30,7 +30,7 @@ const JobListing: React.FC = () => {
         <section ref={sectionRef}>
             <SectionHeader
                 title="Available Roles"
-                subtitle="We're looking for talented individuals to join our mission. Explore the roles below."
+                subtitle="Join our team and gain valuable experience in healthcare AI"
                 className={`transition-all duration-700 ease-out ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
