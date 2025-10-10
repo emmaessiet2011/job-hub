@@ -78,7 +78,7 @@ const WhatWeDo: React.FC = () => {
                                       <CheckCircleIcon />
                                     </div>
                                     <span className="ml-3 text-base">{point}</span>
-                                리
+                                </li>
                             ))}
                         </ul>
                     </div>

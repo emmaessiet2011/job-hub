@@ -8,19 +8,19 @@ import NetworkIcon from './icons/NetworkIcon';
 
 const resources = [
     {
-        icon: <AiIcon />,
+        icon: AiIcon,
         title: 'AI in Healthcare Training',
         description: 'Access our curated resources and training materials on AI applications in healthcare, specifically tailored for the Nigerian context.',
         link: '#',
     },
     {
-        icon: <CloudIcon />,
+        icon: CloudIcon,
         title: 'Azure Cloud Learning Path',
         description: 'Microsoft Azure training resources and cloud computing fundamentals for healthcare technology applications.',
         link: '#',
     },
     {
-        icon: <NetworkIcon />,
+        icon: NetworkIcon,
         title: 'Healthcare Innovation Network',
         description: 'Connect with other healthcare innovators, clinicians, and technology experts across Nigeria.',
         link: '#',
@@ -42,9 +42,9 @@ const Resources: React.FC = () => {
             />
 
             <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {resources.map((resource, index) => (
+                {resources.map(({ icon: Icon, title, description, link }, index) => (
                     <div
-                        key={resource.title}
+                        key={title}
                         className={`group flex flex-col h-full bg-white/80 backdrop-blur-md border border-white/20 rounded-xl p-8 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-white/40 hover:-translate-y-2 ${
                             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}
@@ -52,16 +52,17 @@ const Resources: React.FC = () => {
                     >
                         <div className="flex-grow">
                              <div className="flex items-center justify-center h-16 w-16 bg-nhs-blue-light rounded-full mb-6 group-hover:bg-nhs-blue transition-colors duration-300">
-                                {React.cloneElement(resource.icon as React.ReactElement, { className: 'h-8 w-8 text-nhs-blue group-hover:text-white transition-colors duration-300' })}
+                                {/* FIX: Replaced React.cloneElement with direct component rendering for better type safety. */}
+                                <Icon className={'h-8 w-8 text-nhs-blue group-hover:text-white transition-colors duration-300'} />
                             </div>
-                            <h3 className="text-xl font-bold font-sans text-nhs-charcoal">{resource.title}</h3>
+                            <h3 className="text-xl font-bold font-sans text-nhs-charcoal">{title}</h3>
                             <p className="mt-4 text-nhs-grey-dark text-base leading-relaxed">
-                                {resource.description}
+                                {description}
                             </p>
                         </div>
                         <div className="mt-6">
                             <a
-                                href={resource.link}
+                                href={link}
                                 className="group/button inline-flex items-center font-bold text-nhs-blue hover:text-nhs-blue-dark transition-colors duration-200"
                             >
                                 <span>Explore Resources</span>
