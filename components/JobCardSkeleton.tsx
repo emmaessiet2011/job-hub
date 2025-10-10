@@ -1,8 +1,9 @@
+
 import React from 'react';
 
 const JobCardSkeleton: React.FC = () => {
   return (
-    <div className="flex flex-col h-full bg-white border border-gray-200/80 rounded-3xl p-6 shadow-md animate-pulse">
+    <div className="flex flex-col h-full bg-white border border-gray-200/80 rounded-xl p-6 shadow animate-pulse">
       <div className="flex-grow">
         <div className="h-6 bg-gray-300 rounded w-3/4"></div>
         <div className="mt-4 flex gap-x-4">

@@ -3,7 +3,7 @@ import React from 'react';
 const CheckCircleIcon: React.FC = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6 flex-shrink-0 text-brand-teal"
+        className="h-6 w-6 flex-shrink-0 text-nhs-blue"
         viewBox="0 0 20 20"
         fill="currentColor"
     >

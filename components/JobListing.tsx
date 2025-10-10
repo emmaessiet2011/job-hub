@@ -4,6 +4,7 @@ import JobCard from './JobCard';
 import { Job, FilterType } from '../types';
 import JobCardSkeleton from './JobCardSkeleton';
 import useIntersectionObserver from '../hooks/useIntersectionObserver';
+import SectionHeader from './SectionHeader';
 
 const JobListing: React.FC = () => {
     const [jobs, setJobs] = useState<Job[]>([]);
@@ -27,18 +28,13 @@ const JobListing: React.FC = () => {
 
     return (
         <section ref={sectionRef}>
-            <div
-                className={`text-center transition-all duration-700 ease-out ${
+            <SectionHeader
+                title="Available Roles"
+                subtitle="We're looking for talented individuals to join our mission. Explore the roles below."
+                className={`transition-all duration-700 ease-out ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`}
-            >
-                <h2 className="text-4xl sm:text-5xl font-serif font-bold tracking-tight text-brand-charcoal">
-                    Available Roles
-                </h2>
-                <p className="mt-4 max-w-2xl mx-auto text-lg text-brand-gray">
-                    We're looking for talented individuals to join our mission. Explore the roles below.
-                </p>
-            </div>
+            />
 
             <div
                 className={`mt-10 border-b border-gray-200 transition-all duration-700 ease-out ${
@@ -53,8 +49,8 @@ const JobListing: React.FC = () => {
                             onClick={() => setActiveFilter(filter)}
                             className={`whitespace-nowrap pb-4 px-1 border-b-2 font-semibold text-base transition-all duration-200 focus:outline-none transform hover:-translate-y-0.5 ${
                                 activeFilter === filter
-                                    ? 'border-brand-teal text-brand-teal'
-                                    : 'border-transparent text-brand-gray hover:border-gray-300 hover:text-brand-charcoal'
+                                    ? 'border-nhs-blue text-nhs-blue'
+                                    : 'border-transparent text-nhs-grey-dark hover:border-gray-300 hover:text-nhs-charcoal'
                             }`}
                         >
                             {filter}
@@ -84,7 +80,7 @@ const JobListing: React.FC = () => {
             </div>
             {!isLoading && filteredJobs.length === 0 && (
                  <div
-                    className={`mt-12 col-span-full text-center text-brand-gray transition-opacity duration-500 ease-out ${
+                    className={`mt-12 col-span-full text-center text-nhs-grey-dark transition-opacity duration-500 ease-out ${
                         isVisible ? 'opacity-100' : 'opacity-0'
                     }`}
                     style={{ transitionDelay: '300ms' }}
